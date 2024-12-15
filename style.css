@@ -1,0 +1,373 @@
+/*
+Theme Name: Gaming News
+Theme URI: https://codeworkweb.com/wordpress-themes/gaming-news/
+Template: xews-lite
+Text Domain: gaming-news
+Author: Code Work Web
+Author URI: https://codeworkweb.com/
+Description: Stay Ahead of the Game: Your Daily Dose of Gaming News! Publish the latest updates on releases, reviews, and industry buzz. From console wars to esports showdowns, we've got you covered. Level up your gaming website with our perfect template for gaming news. Get free support at https://codeworkweb.com/contact/ and Check demo at https://demo.codeworkweb.com/xews/
+Tags: custom-background,custom-logo,custom-menu,featured-images,threaded-comments,translation-ready,sticky-post,rtl-language-support,custom-colors,news,gaming
+Version: 1.0.1
+Tested up to: 6.5
+Requires PHP: 7.4
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+Blog News is based on Underscores https://underscores.me/, (C) 2012-2024 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+*/
+
+body {
+    background: #1b2838;
+}
+
+.site-main .inner-content-wrapp article,
+.site-main .widget {
+    background: #fff;
+    padding: 30px;
+    box-shadow: 0 1px 3px rgb(0 0 0/15%);
+}
+
+article:not(:first-child) {
+    margin-top: 35px;
+}
+
+body.gaming-list .wrapp-inner {
+    padding-right: 0;
+}
+
+.widget.widget_block {
+    margin-bottom: 35px;
+}
+
+.xews-archive-navigation {
+    margin: 25px 0;
+}
+
+ul.wp-block-categories-list.wp-block-categories li {
+    list-style: none;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+ul.wp-block-categories-list.wp-block-categories li:last-child {
+    border: none;
+}
+
+ul.wp-block-categories-list.wp-block-categories {
+    margin: 0;
+    padding: 0;
+}
+
+.widget-area .wp-block-categories a {
+    padding: 12px 0;
+}
+
+.gaming-list.sidebar-right .img-wrapp a.post-thumbnail img,
+.gaming-list.sidebar-left .img-wrapp a.post-thumbnail img {
+    min-height: 250px;
+}
+
+.gaming-list article:not(:first-child),
+.gaming-list-alternate article:not(:first-child),
+body.gaming-list .wrapp-inner {
+    border: none;
+}
+
+/**
+* Dark mode
+*/
+[data-theme="dark"] body.custom-background {
+    background-color: var(--theme-darkmode-bg-color);
+}
+
+[data-theme="dark"] .site-main .inner-content-wrapp article,
+[data-theme="dark"] .site-main .widget {
+    background: #1d3140;
+}
+
+/**
+* element designs
+*/
+.code-wrapp.module1 .gaming-outer-wrapp.col-3 {
+    background: #fff;
+}
+
+.code-wrapp.module2.layout-1 .gaming-outer-wrapp.col-1 {
+    background: #fff;
+    padding: 30px !important;
+}
+
+.code-wrapp.module2.layout-1 .gaming-inner-wrapp img {
+    object-fit: cover;
+    min-height: 150px;
+}
+
+/**
+* News Ticker
+*
+*/
+ul.xews-news-ticker-content {
+    width: 88%;
+    margin: 0;
+    padding: 0;
+}
+
+ul.xews-news-ticker-content li a {
+    text-decoration: none;
+}
+
+
+.xews-ticker-wrapper ul {
+    visibility: hidden;
+}
+
+.xews-ticker-wrapper ul.slick-initialized {
+    visibility: visible;
+}
+
+.xews-news-ticker-content {
+    margin: 0;
+    padding: 0;
+}
+
+.xews-news-ticker-content li a {
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-transform: capitalize;
+    color: #fff;
+}
+
+
+.xews-ticker-wrapper .inner-wrapper.cww-flex {
+    justify-content: flex-start;
+}
+
+.xews-ticker-wrapper ul {
+    width: 80%;
+    position: relative;
+}
+
+.ticker-label.layout-two:after {
+    content: '';
+    position: absolute;
+    right: -15px;
+    border: 8px solid transparent;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+.ticker-label {
+    position: relative;
+}
+
+.xews-ticker-wrapper span.xews-news-ticker-date {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+}
+
+.xews-ticker-wrapper .slick-prev.slick-arrow,
+.xews-ticker-wrapper .slick-next.slick-arrow {
+    position: absolute;
+    font-size: 0;
+    background: transparent;
+    border: 1px solid #ccc;
+    padding: 7px 10px;
+    border-radius: 0;
+    z-index: 99999;
+    transform: none;
+    height: auto;
+    width: auto;
+}
+
+.side-menu-active .xews-ticker-wrapper .slick-prev.slick-arrow,
+.side-menu-active .xews-ticker-wrapper .slick-next.slick-arrow,
+.side-menu-active .xews-header-container.menu-fixed-triggered {
+    z-index: 1;
+}
+
+.xews-ticker-wrapper .slick-arrow.slick-prev {
+    top: 0;
+    left: 88%;
+}
+
+.xews-ticker-wrapper .slick-arrow.slick-next {
+    right: 10px;
+    top: 0;
+}
+
+.xews-ticker-wrapper .slick-arrow.slick-next:hover,
+.xews-ticker-wrapper .slick-arrow.slick-prev:hover {
+    cursor: pointer;
+    border-color: var(--theme-color);
+    background: var(--theme-color);
+}
+
+.xews-ticker-wrapper .slick-arrow.slick-next:hover:before,
+.xews-ticker-wrapper .slick-arrow.slick-prev:hover:before {
+    color: #fff
+}
+
+.xews-ticker-wrapper .slick-prev:before,
+.xews-ticker-wrapper .slick-next:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    content: "\f053";
+    font-size: 12px;
+    color: #ccc;
+}
+
+.xews-ticker-wrapper .slick-next:before {
+    content: "\f054";
+}
+
+.xews-ticker-wrapper span.label-icon {
+    margin-right: 5px;
+}
+
+.ticker-label.layout-two:after {
+    border-left-color: var(--theme-color);
+}
+
+.top-header.xews-header-container {
+    background-color: #1F2225;
+}
+
+/**
+*/
+.site-main aside.widget-area.secondary {
+    margin-top: 35px;
+}
+
+/**
+* Dark mode
+*/
+[data-theme="dark"] .code-wrapp.module2.layout-1 .gaming-outer-wrapp.col-1 {
+    background: #1d2d37;
+}
+
+[data-theme="dark"] .code-wrapp.module2.layout-1 .gaming-outer-wrapp.col-1:not(:last-child) {
+    border-color: #1d2d37;
+}
+
+[data-theme="dark"] .code-wrapp.module1 .gaming-outer-wrapp.col-3 {
+    background: #142028;
+}
+
+[data-theme="dark"] .bottom-header.xews-header-container {
+    background-color: #1f3241;
+}
+
+[data-theme="dark"] .site-title a,
+[data-theme="dark"] .main-navigation .menu-primary-menu-container ul li a,
+[data-theme="dark"] .menu-primary-menu-container>ul>li .sub-menu li:hover>a,
+[data-theme="dark"] .menu-primary-menu-container>ul>li .sub-menu li:focus-within>a,
+[data-theme="dark"] button.xews-dark-mode-toggle {
+    color: #fff;
+}
+
+[data-theme="dark"] .main-navigation .menu-primary-menu-container ul li .sub-menu a {
+    color: #ffffff;
+}
+
+/**
+* Header
+*/
+/* .main-header.xews-header-container {
+    display: none;
+} */
+
+.xews-ticker-wrapper {
+    width: 70%;
+}
+
+.bottom-header.xews-header-container {
+    background-color: #1f3241;
+    padding: 14px;
+}
+
+.main-navigation .menu-primary-menu-container ul li a {
+    color: #ffffff !important;
+}
+
+button.xews-dark-mode-toggle {
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 750px) {
+    .xews-ticker-wrapper {
+        margin-bottom: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    .xews-ticker-wrapper {
+        width: 70%;
+    }
+
+    .xews-ticker-wrapper {
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .xews-ticker-wrapper {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .top-header.xews-header-container {
+        padding-top: 60px;
+    }
+
+    .top-header.xews-header-container {
+        padding-top: 60px;
+    }
+}
+
+.main-headers.xews-header-container {
+    background-color: #1C1D21;
+}
+
+.main-header-xews-wrapper.main-header-elem-wrap.header-elements-wrap.cww-flex {
+    padding: 0px 0;
+}
+
+.main-header-xews-wrapper.main-header-elem-wrap.header-elements-wrap.cww-flex a,
+.main-header-xews-wrapper.main-header-elem-wrap.header-elements-wrap.cww-flex p.site-description {
+    color: #ffffff;
+}
+
+.main-navigation ul ul {
+    background-color: #142028;
+}
+
+
+[data-theme="dark"] body.home.blog .sticky h2.entry-title a,
+[data-theme="dark"] body.home.blog .sticky .entry-meta a,
+[data-theme="dark"] body.home.blog .sticky span.author-by,
+[data-theme="dark"] body.home.blog .sticky span.posted-on a,
+[data-theme="dark"] body.home.blog .inner-content-wrapp span a i,
+[data-theme="dark"] body.home.blog .sticky .entry-content p {
+    color: var(--theme-darkmode-text-color) !important;
+}
+
+[data-theme="light"] body.single-post .xews-related-posts-outer span.title-bg,
+[data-theme="light"] body.home.blog .inner-content-wrapp span.total-page-text,
+[data-theme="light"] body.home.blog .inner-content-wrapp ul li,
+[data-theme="light"] body.home.blog .inner-content-wrapp span a i,
+[data-theme="light"] body.error404 header h1.page-title,
+[data-theme="light"] body.error404 .page-content p {
+    color: #ffffff;
+}
